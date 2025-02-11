@@ -7,6 +7,8 @@ import {
   TextInput,
   Button,
 } from "react-native";
+import ToDoForm from "./ToDoForm";
+import ToDoList from "./ToDoList";
 
 export default function App() {
   return (
@@ -24,23 +26,10 @@ export default function App() {
       </Text>
       /
       <ScrollView style={{ width: "100%" }}>
-        <View style={styles.task}>
-          <Text>Task 1: Buy groceries</Text>
-        </View>
-        <View style={styles.task}>
-          <Text>Task 2: Walk the dog</Text>
-        </View>
-        <View style={styles.task}>
-          <Text>Task 3: Read a book</Text>
-        </View>
-        <View
-          style={styles.formContainer}
-          automaticallyAdjustKeyboardInsets={true}
-        >
-          <TextInput style={styles.input} placeholder="Add a new task" />
-          <Button title="Add" onPress={() => {}} />
-        </View>
+        <ToDoList />
+        <ToDoForm />
       </ScrollView>
+
     </View>
   );
 }
